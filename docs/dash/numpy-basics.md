@@ -1,10 +1,14 @@
+# Numpy
+
+Numpy is a package used to conduct data analysis in Python. For Dash, numpy arrays are useful as input for Plotly and Dahs objects (Dash is built by Plotly)
+
 ## First install pandas and numpy
 
-pip install numpy
+`pip install numpy`
 
-## Import pandas and nump
+## Import numpy
 
-import numpy as np
+`import numpy as np`
 
 ## Arrays in Numpy
 
@@ -15,8 +19,19 @@ Convert list to array
 `arr = np.array(mylist)`
 <br>
 
-## Shaping 1D to 2D array
+## Differences with Lists
 
-`arr.reshape(2,2)`
+- **+** in arrays do element-wise addition, versus concatenation in lists
+- **/***  in arrays do element-wise multiplication, versus duplication in lists
+- **/*/*** in arrays do element-wise squaring; this does not work in lsits
+
+## Math operations
+`np.sum()` gives sum of elements in array
 <br>
-Two rows, two columns
+`np.dot()` gives dot product of two arrays
+<br>
+`np.sqrt()` gives square root of an array
+<br>
+`np.mean()` gives mean of array
+<br>
+`np.var()` gives variance of array
