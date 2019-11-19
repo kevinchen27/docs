@@ -1,6 +1,6 @@
 ## Install plotly 
 
-Basic plotly gives us idea of Dash syntax and documentation
+Basic plotly gives us an idea of Dash syntax and documentation. Dash syntax for its graphics are built on top of plotly. Plotly images are saved as html files in the computer.
 <br>
 `pip install plotly==4.2.1`
 

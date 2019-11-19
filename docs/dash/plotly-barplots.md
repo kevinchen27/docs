@@ -17,3 +17,4 @@ y is corresponding array or column of total count of something
 `fig = go.Figure(data,layout)`
 <br>
 `pyo.plot(fig)`
+
