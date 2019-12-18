@@ -8,22 +8,25 @@ Dash is great because:
 ## Essential packages
 
 These packages must also be installed via pip install prior to loading them: 
-`import dash
+```
+import dash
 import dash_core_components as dcc
 import dash_html_components as html
 import plotly.graph_objs as go
 import numpy as np
-import pandas as pd`
+import pandas as pd
+```
 
 ## Step 1: Create instance of Dash
 
 `app = dash.Dash()`
-
+<br>
 `app.layout = html.Div()` Creates a division in our dashboard to insert things
 
 ## Sample barplot
 
-`app.layout = html.Div(children = [    
+```
+app.layout = html.Div(children = [    
     html.H1("Hello Dash!"), 
     html.Div("Dash: Web Dashboard with Python"),
     dcc.Graph(id= "example", #dcc - dash core component and id for reference
@@ -37,7 +40,8 @@ import pandas as pd`
                 ])
 
 if __name__ == '__main__': #checks if im running this script, it will grab application obj and run the server 
-    app.run_server()`
+    app.run_server()
+```
 <br>    
 **Documentation Breakdown**
 <br>

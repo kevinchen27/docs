@@ -22,9 +22,8 @@ Convert list to array
 ## Differences with Lists
 
 - **+** in arrays do element-wise addition, versus concatenation in lists
-- **/***  in arrays do element-wise multiplication, versus duplication in lists
-- **/*/*** in arrays do element-wise squaring; this does not work in lists
-- **/+** in arrays adds each element of the array with that of another array. Both arrays should be of the same length. In lists, this is concatenation
+- *  in arrays do element-wise multiplication, versus duplication in lists
+- ** in arrays do element-wise squaring; this does not work in lists
 
 ## Math operations
 `np.sum()` gives sum of elements in array

@@ -14,21 +14,30 @@ Basic plotly gives us an idea of Dash syntax and documentation. Dash syntax for 
 Data must first be in a list
 <br>
 ### Setup data
-`data = [go.Scatter(x= <list of values for x-axis>,
+<br>
+
+```
+data = [go.Scatter(x= <list of values for x-axis>,
     y =<list of values for y-axis>,
     mode = 'markers', 
     marker = dict(size = <numeric size>,
     color = "<insert color or rgb>",
     symbol = "<type of scatterplot symbol>",
     line = dict(<dictionary specifying with of line>)
-    ))]`
-    <br>
+    ))]
+ ```    
+    
+<br>
 <br>
 ### Define Layout
-`layout = go.Layout(title = "<insert plot title",
+
+```
+layout = go.Layout(title = "<insert plot title",
                   xaxis = dict(title = "MY X AXIS" ,
                   yaxis = dict(title = "MY Y AXIS"), 
-                  hovermode = "closest")`
+                  hovermode = "closest")
+```
+                  
 <br>
 <br>
 ### Save HTML file
@@ -40,4 +49,6 @@ Data must first be in a list
 `fig = go.Figure(data=data,layout=layout)`
 <br>
 `pyo.plot(fig,filename="<filename>.html")`
+
+
 

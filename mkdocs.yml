@@ -35,10 +35,16 @@ markdown_extensions:
 nav:
 - Home: index.md
 
-- Dash:
+- Dash Prerequisites:
   - Numpy Basics: dash/numpy-basics.md
   - Pandas Basics: dash/pandas-basics.md
   - Plotly Basics : dash/plotly-basics.md
+  - Plotly Barplots : dash/plotly-barplots.md
+
+- Dash:
+  - Dash Intro: dash/dash.md
+  - ICD 11 Data Entry: dash/ICD-11-Dash.md
+  - ICD 11 Dashboards: dash/ICD-11-Visualizations.md
 
 - Flask: 
   - Intro to Flask: flask/flask-concepts.md
