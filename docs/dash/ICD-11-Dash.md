@@ -28,6 +28,7 @@ The JSON files were imported and read into a list, and another list was created 
 
 ## Tidying data into pandas.dataframe
 
+<<<<<<< HEAD
 The reason we want to do this is because Dash works well with pandas data.frames. 
 
 ```
@@ -60,3 +61,6 @@ df.index = titles
 df = df.astype(int)
 df2 = df.assign(total_nodes = lambda x: df.sum(axis =1))
 ```
+=======
+The reason we want to this is because Dash works well with pandas data.frames
+>>>>>>> fdebf356440937f88cd478d30c950f880a9470e1
