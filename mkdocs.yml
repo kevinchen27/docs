@@ -43,10 +43,17 @@ nav:
 
 - Dash:
   - Dash Intro: dash/dash.md
-  - ICD 11 Data Entry: dash/ICD-11-Dash.md
-  - ICD 11 Dashboards: dash/ICD-11-Visualizations.md
+ 
+- ICD 11 Dash:
+  - NetworkX basics: dash/NetworkX-learning.md
+  - ICD 11 Data Entry: icd-11/ICD-11-Dash.md
+  - ICD 11 Dashboards: icd-11/ICD-11-Visualizations.md
 
 - Flask: 
   - Intro to Flask: flask/flask-concepts.md
   - Creating First Website: flask/first-website.md
   - Dynamic Routing: flask/dynamic-routing.md
+  
+- Neo4j:
+  - Intro to Neo4j: neo4j/neo4j-learning.md
+  - ICD 11 Neo4j: neo4j/icd11-neo4j

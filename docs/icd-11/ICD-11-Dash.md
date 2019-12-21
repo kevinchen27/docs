@@ -47,7 +47,7 @@ for G in trees:
 ```
 
 <p align = "center">
-<img src="https://github.com/kevinchen27/lyft-rides-analysis/blob/master/Pictures/top%2010.png" width="500" align = "middle"/>
+<img src="https://github.com/kevinchen27/docs/blob/master/images/node%20depth.png" width="500" align = "middle"/>
 </p>
 
 
@@ -62,5 +62,5 @@ df = df.astype(int)
 df2 = df.assign(total_nodes = lambda x: df.sum(axis =1))
 ```
 =======
-The reason we want to this is because Dash works well with pandas data.frames
+The reason we want to do this is because Dash works well with pandas data.frames
 >>>>>>> fdebf356440937f88cd478d30c950f880a9470e1
