@@ -58,7 +58,7 @@
     
       
   <li class="navtree toctree-l1 label">
-    <p class="caption">Dash</p>
+    <p class="caption">Dash Prerequisites</p>
   </li>
 
 
@@ -82,46 +82,44 @@
       
 
   <li class="toctree-l2 current with-children">
-    <a href="#first-install-pandas-and-numpy">
-      First install pandas and numpy
+    <a href="#numpy">
+      Numpy
       <span class="toctree-expand"></span>
     </a>
   </li>
 
 
 
+  <li class="toctree-l2 current">
+    <ul class="subnav-l2 current">
+    
       
-
-  <li class="toctree-l2">
-    <a href="#import-pandas-and-nump">
-      Import pandas and nump
-      <span class="toctree-expand"></span>
-    </a>
-  </li>
-
-
-
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#first-install-pandas-and-numpy">First install pandas and numpy</a>
+        </li>
+    
       
-
-  <li class="toctree-l2">
-    <a href="#arrays-in-numpy">
-      Arrays in Numpy
-      <span class="toctree-expand"></span>
-    </a>
-  </li>
-
-
-
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#import-numpy">Import numpy</a>
+        </li>
+    
       
-
-  <li class="toctree-l2">
-    <a href="#shaping-1d-to-2d-array">
-      Shaping 1D to 2D array
-      <span class="toctree-expand"></span>
-    </a>
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#arrays-in-numpy">Arrays in Numpy</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#differences-with-lists">Differences with Lists</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#math-operations">Math operations</a>
+        </li>
+    
+    </ul>
   </li>
-
-
 
 
   
@@ -138,6 +136,69 @@
 
   <li class="navtree toctree-l2 inactive">
     <a class="" href="../plotly-basics/">Plotly Basics</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../plotly-barplots/">Plotly Barplots</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Dash</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../dash/">Dash Intro</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">ICD 11 Dash</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../NetworkX-learning/">NetworkX basics</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../icd-11/ICD-11-Dash/">ICD 11 Data Entry</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../icd-11/ICD-11-Visualizations/">ICD 11 Dashboards</a>
   </li>
         
       </ul>
@@ -178,6 +239,34 @@
       </ul>
     </li>
     
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Neo4j</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../neo4j/neo4j-learning/">Intro to Neo4j</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../neo4j/icd11-neo4j">ICD 11 Neo4j</a>
+  </li>
+        
+      </ul>
+    </li>
+    
   </ul>
       </div>
       &nbsp;
@@ -200,7 +289,7 @@
     
       
         
-          <li>Dash &raquo;</li>
+          <li>Dash Prerequisites &raquo;</li>
         
       
     
@@ -214,10 +303,12 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="first-install-pandas-and-numpy">First install pandas and numpy</h2>
-<p>pip install numpy</p>
-<h2 id="import-pandas-and-nump">Import pandas and nump</h2>
-<p>import numpy as np</p>
+                <h1 id="numpy">Numpy</h1>
+<p>Numpy is a package used to conduct data analysis in Python. For Dash, numpy arrays are useful as input for Plotly and Dash objects (Dash is built by Plotly)</p>
+<h2 id="first-install-pandas-and-numpy">First install pandas and numpy</h2>
+<p><code>pip install numpy</code></p>
+<h2 id="import-numpy">Import numpy</h2>
+<p><code>import numpy as np</code></p>
 <h2 id="arrays-in-numpy">Arrays in Numpy</h2>
 <p>Convert list to array
 <br>
@@ -225,10 +316,26 @@
 <br>
 <code>arr = np.array(mylist)</code>
 <br></p>
-<h2 id="shaping-1d-to-2d-array">Shaping 1D to 2D array</h2>
-<p><code>arr.reshape(2,2)</code>
+<h2 id="differences-with-lists">Differences with Lists</h2>
+<ul>
+<li><strong>+</strong> in arrays do element-wise addition, versus concatenation in lists</li>
+<li>
+<ul>
+<li>in arrays do element-wise multiplication, versus duplication in lists</li>
+</ul>
+</li>
+<li>** in arrays do element-wise squaring; this does not work in lists</li>
+</ul>
+<h2 id="math-operations">Math operations</h2>
+<p><code>np.sum()</code> gives sum of elements in array
 <br>
-Two rows, two columns</p>
+<code>np.dot()</code> gives dot product of two arrays
+<br>
+<code>np.sqrt()</code> gives square root of an array
+<br>
+<code>np.mean()</code> gives mean of array
+<br>
+<code>np.var()</code> gives variance of array</p>
               
             </div>
           </div>

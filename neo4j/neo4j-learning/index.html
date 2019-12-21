@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Dynamic Routing - Tools and Software Tutorials</title>
+  <title>Intro to Neo4j - Tools and Software Tutorials</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Dynamic Routing";
-    var mkdocs_page_input_path = "flask\\dynamic-routing.md";
+    var mkdocs_page_name = "Intro to Neo4j";
+    var mkdocs_page_input_path = "neo4j\\neo4j-learning.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -169,56 +169,22 @@
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../flask-concepts/">Intro to Flask</a>
+    <a class="" href="../../flask/flask-concepts/">Intro to Flask</a>
   </li>
         
           
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../first-website/">Creating First Website</a>
+    <a class="" href="../../flask/first-website/">Creating First Website</a>
   </li>
         
           
 
 
-  
-    
-    <li class="navtree toctree-l2 page current">
-      <a class="current" href="./">
-        Dynamic Routing
-          <span class="toctree-expand"></span>
-      </a>
-    </li>
-    
-      
-
-
-
-      
-
-  <li class="toctree-l2">
-    <a href="#create-approute">
-      Create app.route
-      <span class="toctree-expand"></span>
-    </a>
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../flask/dynamic-routing/">Dynamic Routing</a>
   </li>
-
-
-
-      
-
-  <li class="toctree-l2">
-    <a href="#run-server">
-      Run server
-      <span class="toctree-expand"></span>
-    </a>
-  </li>
-
-
-
-
-  
         
       </ul>
     </li>
@@ -237,15 +203,66 @@
           
 
 
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../neo4j/neo4j-learning/">Intro to Neo4j</a>
+  
+    
+    <li class="navtree toctree-l2 page current">
+      <a class="current" href="./">
+        Intro to Neo4j
+          <span class="toctree-expand"></span>
+      </a>
+    </li>
+    
+      
+
+  <li class="toctree-l2 current with-children">
+    <a href="#neo4j">
+      Neo4j
+      <span class="toctree-expand"></span>
+    </a>
   </li>
+
+
+
+      
+
+  <li class="toctree-l2">
+    <a href="#neo4j-cypher">
+      Neo4j Cypher
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l2">
+    <ul class="subnav-l2 toc-hidden">
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#node-syntax-in-cypher">Node syntax in Cypher</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#pattern-syntax">Pattern Syntax</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#pattern-syntax-with-variables">Pattern Syntax with variables</a>
+        </li>
+    
+    </ul>
+  </li>
+
+
+  
         
           
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../neo4j/icd11-neo4j">ICD 11 Neo4j</a>
+    <a class="" href="../icd11-neo4j">ICD 11 Neo4j</a>
   </li>
         
       </ul>
@@ -273,11 +290,11 @@
     
       
         
-          <li>Flask &raquo;</li>
+          <li>Neo4j &raquo;</li>
         
       
     
-    <li>Dynamic Routing</li>
+    <li>Intro to Neo4j</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -287,18 +304,41 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="dynamic-routing">Dynamic Routing</h2>
-<p>Route to different page depending on situation, such as in when different users log in to different accounts.
-However, steps to create and initialize Flask app remain the same.</p>
-<h2 id="create-approute">Create app.route</h2>
-<p><code>@app.route('/some_page/&lt;name&gt;')
-def other_page(name): #essentially we're just returning user and formatting the name into the user
-    return 'User: {}'.format(name)</code></p>
-<p><strong><name></strong> is an input, in this case for example the username. Flask will route to a different page depending on username input.</p>
-<h2 id="run-server">Run server</h2>
-<p><code>if __name__ == "__main__":
-    app.run()</code></p>
-<p>Must add /some_page/<name> to the end of the URL, where name can be anything</p>
+                <h2 id="neo4j">Neo4j</h2>
+<p>Neo4j is a graph database platform that simplifies operations and analysis on network graphs. It is designed for fast management of nodes and relationships and is significantly faster than performing JOINS on tables. </p>
+<h2 id="neo4j-cypher">Neo4j Cypher</h2>
+<p>Cypher is Neo4j's query language. It is built for working with graph data and uses patterns to match and describe graph data. Example of a Neo4j query:</p>
+<h3 id="node-syntax-in-cypher">Node syntax in Cypher</h3>
+<p>() represents an anonymous node. If we want to refer to the node elsewhere, we add a varriable, like (matrix). 
+<br>
+() - anonymous node
+<br>
+(matrix) - variable added to node. This variable can be referenced later in the query
+<br>
+(:Movie) - label :Movie declares the node's type
+<br>
+(matrix:Movie) - variable name matrix with label Movie
+<br>
+(matrix:Movie {title: "The Matrix"}) - variable matrix of type Movie with the property title having value 'The Matrix'
+<br>
+(matrix:Movie {title: "The Matrix", released: 1997})
+<br>
+Variables are restricted to single statement i.e they may have different or no meaning in another statement</p>
+<h3 id="pattern-syntax">Pattern Syntax</h3>
+<p>Example:
+<br>
+<code>(:Person) - [:LIVES_IN]-&gt;(:CITY)-[:PART_OF]-&gt;(:Country)</code> 
+<br>
+This statement finds a Person (label) who "Lives in" (relationship) in a "City" (label) which is "Part Of" (relationship) a "country" (label)</p>
+<h3 id="pattern-syntax-with-variables">Pattern Syntax with variables</h3>
+<p>Using a variable is useful if one wants to refer to that variable later on in a query. IF we are matching a label, we may just specify any variable name before the colon as shown below:</p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>MERGE (a:Person {name:&quot;Ann&quot;})
+CREATE (a)-[&quot;HAS_PET]-&gt;(:Dog{name:&quot;Sam&quot;})
+</pre></div>
+
+
+<p><br>
+The above query Creates a relationship with the Dog whose name is Sam. The person is stored as <code>a</code> and <code>a</code> is referred to when creating the node and relationship with Ann's pet.</p>
               
             </div>
           </div>
@@ -306,10 +346,8 @@ def other_page(name): #essentially we're just returning user and formatting the 
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../neo4j/neo4j-learning/" class="btn btn-neutral float-right" title="Intro to Neo4j">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../first-website/" class="btn btn-neutral" title="Creating First Website"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../flask/dynamic-routing/" class="btn btn-neutral" title="Dynamic Routing"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -335,10 +373,8 @@ def other_page(name): #essentially we're just returning user and formatting the 
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../first-website/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../flask/dynamic-routing/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../../neo4j/neo4j-learning/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

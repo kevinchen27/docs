@@ -58,7 +58,7 @@
     
       
   <li class="navtree toctree-l1 label">
-    <p class="caption">Dash</p>
+    <p class="caption">Dash Prerequisites</p>
   </li>
 
 
@@ -89,6 +89,17 @@
       
 
   <li class="toctree-l2 current with-children">
+    <a href="#why-pandas">
+      Why Pandas
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+      
+
+  <li class="toctree-l2">
     <a href="#install-pandas">
       Install pandas
       <span class="toctree-expand"></span>
@@ -133,6 +144,17 @@
       
 
   <li class="toctree-l2">
+    <a href="#dataframe-format">
+      Data.frame format
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+      
+
+  <li class="toctree-l2">
     <a href="#finding-column-names">
       Finding column names
       <span class="toctree-expand"></span>
@@ -152,6 +174,50 @@
 
 
 
+      
+
+  <li class="toctree-l2">
+    <a href="#referencing-columns">
+      Referencing columns
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+      
+
+  <li class="toctree-l2">
+    <a href="#referencing-columns-to-return-dataframe">
+      Referencing columns to return data.frame
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+      
+
+  <li class="toctree-l2">
+    <a href="#referencing-rows-and-columns-with-loc">
+      Referencing rows and columns with loc
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+      
+
+  <li class="toctree-l2">
+    <a href="#referencing-rows-and-columns-with-iloc">
+      Referencing rows and columns with iloc
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
 
   
         
@@ -160,6 +226,69 @@
 
   <li class="navtree toctree-l2 inactive">
     <a class="" href="../plotly-basics/">Plotly Basics</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../plotly-barplots/">Plotly Barplots</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Dash</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../dash/">Dash Intro</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">ICD 11 Dash</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../NetworkX-learning/">NetworkX basics</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../icd-11/ICD-11-Dash/">ICD 11 Data Entry</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../icd-11/ICD-11-Visualizations/">ICD 11 Dashboards</a>
   </li>
         
       </ul>
@@ -200,6 +329,34 @@
       </ul>
     </li>
     
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Neo4j</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../neo4j/neo4j-learning/">Intro to Neo4j</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../neo4j/icd11-neo4j">ICD 11 Neo4j</a>
+  </li>
+        
+      </ul>
+    </li>
+    
   </ul>
       </div>
       &nbsp;
@@ -222,7 +379,7 @@
     
       
         
-          <li>Dash &raquo;</li>
+          <li>Dash Prerequisites &raquo;</li>
         
       
     
@@ -236,12 +393,16 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="install-pandas">Install pandas</h2>
+                <h2 id="why-pandas">Why Pandas</h2>
+<p>Pandas is essential for data analysis. It allows us to work with data.frames which makes it easy for us to use as input for machine learning models and for graphics packages. Dash also works well with data.frames, and hence this tutorial is included.</p>
+<h2 id="install-pandas">Install pandas</h2>
 <p><code>pip install pandas</code></p>
 <h2 id="import-pandas">Import pandas</h2>
 <p><code>import pandas as pd</code></p>
 <h2 id="read-csv-as-dataframe">Read csv as data.frame</h2>
-<p><code>df = pd.read_csv("salaries.csv")</code></p>
+<p><code>df = pd.read_csv("salaries.csv")</code>
+<br>
+CSV stand for comma-separated values. Most modern data is formatted into csv files for easier analysis with pandas data.frames.</p>
 <h2 id="converting-numpy-array-to-dataframe">Converting Numpy array to data.frame</h2>
 <p>Matrix of 5 rows and 10 columns
 <br>
@@ -250,10 +411,45 @@
 <br>
 Converting to pandas data.frame
 <code>df = pd.DataFrame(data = mat)</code></p>
+<h2 id="dataframe-format">Data.frame format</h2>
+<p>Data.frames have 2 attributes:
+<br>
+- rows or indices
+- columns
+<br>
+Row indices are useful for keeping track of observations and for subsetting rows of a data.frame with loc</p>
 <h2 id="finding-column-names">Finding column names</h2>
-<p><code>df.columns</code></p>
+<p><code>df.columns</code>
+columns is an attribute, not a method, so there are no parentheses.</p>
 <h2 id="renaming-columns">Renaming columns</h2>
 <p><code>df.columns = ["f1","f2","f3","f4","label"]</code></p>
+<h2 id="referencing-columns">Referencing columns</h2>
+<p>Columns in dataa.frames are referenced in square brackets using double quotes:
+<br>
+<code>df["&lt;column name&gt;"]</code>
+<br>
+A single column that is referenced returns a Series object. 
+<br>
+<code>df["col 1"]</code> - returns series
+<br></p>
+<h2 id="referencing-columns-to-return-dataframe">Referencing columns to return data.frame</h2>
+<p>To return a data.frame, place the reference inside a list:
+<br>
+<code>df[["&lt;column name&gt;"]]</code>  - returns data.frame
+<br>
+You can also call multiple columns by name by placing them inside lists</p>
+<h2 id="referencing-rows-and-columns-with-loc">Referencing rows and columns with loc</h2>
+<p><code>loc</code> is used to return certain rows and columns of a data.frame
+<br>
+<code>df.loc["&lt;row&gt;", "&lt;column&gt;"]</code>
+<br>
+<code>loc</code> is useful if you know the "index" or name of the row (and column) that you want to subset. However, it is easier to use <code>iloc</code> if you want to reference rows and columns by integers</p>
+<h2 id="referencing-rows-and-columns-with-iloc">Referencing rows and columns with iloc</h2>
+<p>If you want to reference rows and columns by their position, use <code>iloc</code>
+<br>
+<code>df.iloc[&lt;rownumber&gt;,&lt;colnumber&gt;]</code>
+<br>
+To reference multiple rows and multiple columns, put the rows and/columns into a list</p>
               
             </div>
           </div>

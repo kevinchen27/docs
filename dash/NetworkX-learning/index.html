@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Dynamic Routing - Tools and Software Tutorials</title>
+  <title>NetworkX basics - Tools and Software Tutorials</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Dynamic Routing";
-    var mkdocs_page_input_path = "flask\\dynamic-routing.md";
+    var mkdocs_page_name = "NetworkX basics";
+    var mkdocs_page_input_path = "dash\\NetworkX-learning.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -71,28 +71,28 @@
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../dash/numpy-basics/">Numpy Basics</a>
+    <a class="" href="../numpy-basics/">Numpy Basics</a>
   </li>
         
           
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../dash/pandas-basics/">Pandas Basics</a>
+    <a class="" href="../pandas-basics/">Pandas Basics</a>
   </li>
         
           
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../dash/plotly-basics/">Plotly Basics</a>
+    <a class="" href="../plotly-basics/">Plotly Basics</a>
   </li>
         
           
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../dash/plotly-barplots/">Plotly Barplots</a>
+    <a class="" href="../plotly-barplots/">Plotly Barplots</a>
   </li>
         
       </ul>
@@ -113,7 +113,7 @@
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../dash/dash/">Dash Intro</a>
+    <a class="" href="../dash/">Dash Intro</a>
   </li>
         
       </ul>
@@ -133,9 +133,81 @@
           
 
 
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../dash/NetworkX-learning/">NetworkX basics</a>
+  
+    
+    <li class="navtree toctree-l2 page current">
+      <a class="current" href="./">
+        NetworkX basics
+          <span class="toctree-expand"></span>
+      </a>
+    </li>
+    
+      
+
+  <li class="toctree-l2 current with-children">
+    <a href="#what-is-networkx">
+      What is NetworkX
+      <span class="toctree-expand"></span>
+    </a>
   </li>
+
+
+
+      
+
+  <li class="toctree-l2">
+    <a href="#network-graphs">
+      Network graphs
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+      
+
+  <li class="toctree-l2">
+    <a href="#creating-network-graphs">
+      Creating Network Graphs
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l2">
+    <ul class="subnav-l2 toc-hidden">
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#install-networkx-library">Install NetworkX library</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#import-library">Import library</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#create-empty-graph">Create empty graph</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#add-edges">Add edges</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#add-nodes-with-properties">Add nodes with properties</a>
+        </li>
+    
+    </ul>
+  </li>
+
+
+  
         
           
 
@@ -169,56 +241,22 @@
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../flask-concepts/">Intro to Flask</a>
+    <a class="" href="../../flask/flask-concepts/">Intro to Flask</a>
   </li>
         
           
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../first-website/">Creating First Website</a>
+    <a class="" href="../../flask/first-website/">Creating First Website</a>
   </li>
         
           
 
 
-  
-    
-    <li class="navtree toctree-l2 page current">
-      <a class="current" href="./">
-        Dynamic Routing
-          <span class="toctree-expand"></span>
-      </a>
-    </li>
-    
-      
-
-
-
-      
-
-  <li class="toctree-l2">
-    <a href="#create-approute">
-      Create app.route
-      <span class="toctree-expand"></span>
-    </a>
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../flask/dynamic-routing/">Dynamic Routing</a>
   </li>
-
-
-
-      
-
-  <li class="toctree-l2">
-    <a href="#run-server">
-      Run server
-      <span class="toctree-expand"></span>
-    </a>
-  </li>
-
-
-
-
-  
         
       </ul>
     </li>
@@ -273,11 +311,11 @@
     
       
         
-          <li>Flask &raquo;</li>
+          <li>ICD 11 Dash &raquo;</li>
         
       
     
-    <li>Dynamic Routing</li>
+    <li>NetworkX basics</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -287,18 +325,31 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="dynamic-routing">Dynamic Routing</h2>
-<p>Route to different page depending on situation, such as in when different users log in to different accounts.
-However, steps to create and initialize Flask app remain the same.</p>
-<h2 id="create-approute">Create app.route</h2>
-<p><code>@app.route('/some_page/&lt;name&gt;')
-def other_page(name): #essentially we're just returning user and formatting the name into the user
-    return 'User: {}'.format(name)</code></p>
-<p><strong><name></strong> is an input, in this case for example the username. Flask will route to a different page depending on username input.</p>
-<h2 id="run-server">Run server</h2>
-<p><code>if __name__ == "__main__":
-    app.run()</code></p>
-<p>Must add /some_page/<name> to the end of the URL, where name can be anything</p>
+                <h2 id="what-is-networkx">What is NetworkX</h2>
+<p>NetworkX is a library in Python that specializes in working with network graphs. NetworkX comes with a set of functions that allow for populating, editing and exploring network graphs with node and edge attributes</p>
+<h2 id="network-graphs">Network graphs</h2>
+<p>Network graphs represent connections between data points called "nodes" and connections between these nodes called "edges". All nodes can have properties attached to them, and edges too have properties which specify the relationship between two nodes. 
+<br>
+In ICD 11, each node represents a disease/condition and has properties such as:
+<br>
+- ID: Disease/Condition ID in ICD 11
+- Title: Name of the node
+- Defn: Description of the node</p>
+<h2 id="creating-network-graphs">Creating Network Graphs</h2>
+<h3 id="install-networkx-library">Install NetworkX library</h3>
+<p><code>pip install networkx</code></p>
+<h3 id="import-library">Import library</h3>
+<p><code>import networkx as nx</code></p>
+<h3 id="create-empty-graph">Create empty graph</h3>
+<p><code>G= nx.Graph()</code></p>
+<h3 id="add-edges">Add edges</h3>
+<p>Adding edge between nodes automaticaly creates the nodes between which the edge is specified. You can also specify the properties of the edge.
+<br>
+<code>G.add_edge('A','B', &lt;property 1&gt; = &lt;insert number or word&gt;, ...)</code></p>
+<h3 id="add-nodes-with-properties">Add nodes with properties</h3>
+<p>You can also add nodes and specify its properties:
+<br>
+<code>G.add_node('A', &lt;property1&gt; = &lt;insert property&gt;</code></p>
               
             </div>
           </div>
@@ -306,10 +357,10 @@ def other_page(name): #essentially we're just returning user and formatting the 
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../neo4j/neo4j-learning/" class="btn btn-neutral float-right" title="Intro to Neo4j">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../icd-11/ICD-11-Dash/" class="btn btn-neutral float-right" title="ICD 11 Data Entry">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../first-website/" class="btn btn-neutral" title="Creating First Website"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../dash/" class="btn btn-neutral" title="Dash Intro"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -335,10 +386,10 @@ def other_page(name): #essentially we're just returning user and formatting the 
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../first-website/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../dash/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../neo4j/neo4j-learning/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../icd-11/ICD-11-Dash/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

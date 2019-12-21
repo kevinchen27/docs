@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Dynamic Routing - Tools and Software Tutorials</title>
+  <title>ICD 11 Data Entry - Tools and Software Tutorials</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Dynamic Routing";
-    var mkdocs_page_input_path = "flask\\dynamic-routing.md";
+    var mkdocs_page_name = "ICD 11 Data Entry";
+    var mkdocs_page_input_path = "icd-11\\ICD-11-Dash.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -140,15 +140,67 @@
           
 
 
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../icd-11/ICD-11-Dash/">ICD 11 Data Entry</a>
+  
+    
+    <li class="navtree toctree-l2 page current">
+      <a class="current" href="./">
+        ICD 11 Data Entry
+          <span class="toctree-expand"></span>
+      </a>
+    </li>
+    
+      
+
+  <li class="toctree-l2 current with-children">
+    <a href="#creating-network-tree-from-26-json-files">
+      Creating network tree from 26 json files
+      <span class="toctree-expand"></span>
+    </a>
   </li>
+
+
+
+      
+
+  <li class="toctree-l2">
+    <a href="#properties-of-nodes">
+      Properties of nodes
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+      
+
+  <li class="toctree-l2">
+    <a href="#tidying-data-into-pandasdataframe">
+      Tidying data into pandas.dataframe
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+      
+
+  <li class="toctree-l2">
+    <a href="#transform-dataframe-into-tidy-format-observations-in-rows-variables-in-columns">
+      Transform data.frame into tidy format (observations in rows, variables in columns)
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+
+  
         
           
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../icd-11/ICD-11-Visualizations/">ICD 11 Dashboards</a>
+    <a class="" href="../ICD-11-Visualizations/">ICD 11 Dashboards</a>
   </li>
         
       </ul>
@@ -169,56 +221,22 @@
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../flask-concepts/">Intro to Flask</a>
+    <a class="" href="../../flask/flask-concepts/">Intro to Flask</a>
   </li>
         
           
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../first-website/">Creating First Website</a>
+    <a class="" href="../../flask/first-website/">Creating First Website</a>
   </li>
         
           
 
 
-  
-    
-    <li class="navtree toctree-l2 page current">
-      <a class="current" href="./">
-        Dynamic Routing
-          <span class="toctree-expand"></span>
-      </a>
-    </li>
-    
-      
-
-
-
-      
-
-  <li class="toctree-l2">
-    <a href="#create-approute">
-      Create app.route
-      <span class="toctree-expand"></span>
-    </a>
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../flask/dynamic-routing/">Dynamic Routing</a>
   </li>
-
-
-
-      
-
-  <li class="toctree-l2">
-    <a href="#run-server">
-      Run server
-      <span class="toctree-expand"></span>
-    </a>
-  </li>
-
-
-
-
-  
         
       </ul>
     </li>
@@ -273,11 +291,11 @@
     
       
         
-          <li>Flask &raquo;</li>
+          <li>ICD 11 Dash &raquo;</li>
         
       
     
-    <li>Dynamic Routing</li>
+    <li>ICD 11 Data Entry</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -287,18 +305,81 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="dynamic-routing">Dynamic Routing</h2>
-<p>Route to different page depending on situation, such as in when different users log in to different accounts.
-However, steps to create and initialize Flask app remain the same.</p>
-<h2 id="create-approute">Create app.route</h2>
-<p><code>@app.route('/some_page/&lt;name&gt;')
-def other_page(name): #essentially we're just returning user and formatting the name into the user
-    return 'User: {}'.format(name)</code></p>
-<p><strong><name></strong> is an input, in this case for example the username. Flask will route to a different page depending on username input.</p>
-<h2 id="run-server">Run server</h2>
-<p><code>if __name__ == "__main__":
-    app.run()</code></p>
-<p>Must add /some_page/<name> to the end of the URL, where name can be anything</p>
+                <h2 id="creating-network-tree-from-26-json-files">Creating network tree from 26 json files</h2>
+<p>ICD 11 data consists of 26 root nodes, each having its own subtree. The data for each subtree/root was downloaded using a recursive algorithm deployed by Dibakar Sigdel. The network graph database was made created using NetworkX, with the following code</p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>trees = []
+for data in N:
+    G = nx.Graph()
+    for item in data:
+        item_id = item[&#39;id&#39;]
+        G.add_node(item_id,\
+               title=item[&#39;title&#39;],\
+               defn = item[&#39;defn&#39;])
+        childs = item[&#39;childs&#39;]
+        if childs!= &#39;Key Not found&#39;:
+            for c_id in childs:
+                G.add_edge(item_id,c_id, object = &#39;child&#39;)
+    trees.append(G)
+</pre></div>
+
+
+<p>The JSON files were imported and read into a list, and another list was created which stored the nodes and edges of all the nodes in the 26 trees.</p>
+<h2 id="properties-of-nodes">Properties of nodes</h2>
+<ul>
+<li>Item id: ID of the node</li>
+<li>Title: Name of the node</li>
+<li>Defn: Description of the node</li>
+<li>Child: Children of the node (helps in building edges that specify relationship</li>
+</ul>
+<h2 id="tidying-data-into-pandasdataframe">Tidying data into pandas.dataframe</h2>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+The reason we want to do this is because Dash works well with pandas data.frames. </p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>lists = [] #list storing every single root with its subtree
+for G in trees:
+    root = list(G.nodes())[0] #stores the root tree
+    node2depth = [] 
+    #for loop to iterate through every node in the each subtree
+    for node in G.nodes():
+        depth = nx.shortest_path_length(G, root, node)
+        #print(node,&quot;|&quot;,depth)
+        node2depth.append({&quot;node&quot;:node,&quot;depth&quot;:depth}) 
+    DF = pd.DataFrame(node2depth) #stores node id and corresponding depth level
+    DF = DF.set_index(&quot;depth&quot;)
+    lists.append(DF.groupby(&quot;depth&quot;).count())
+</pre></div>
+
+
+<p align = "center">
+<img src="https://github.com/kevinchen27/docs/blob/master/images/node%20depth.png" width="500" align = "middle"/>
+</p>
+
+<h2 id="transform-dataframe-into-tidy-format-observations-in-rows-variables-in-columns">Transform data.frame into tidy format (observations in rows, variables in columns)</h2>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>df = pd.concat(lists, axis=1)
+df = df.fillna(0)
+df = df.transpose()
+df.index = titles
+df = df.astype(int)
+df2 = df.assign(total_nodes = lambda x: df.sum(axis =1))
+</pre></div>
+
+
+<p>=======
+The reason we want to do this is because Dash works well with pandas data.frames</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>fdebf356440937f88cd478d30c950f880a9470e1</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
               
             </div>
           </div>
@@ -306,10 +387,10 @@ def other_page(name): #essentially we're just returning user and formatting the 
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../neo4j/neo4j-learning/" class="btn btn-neutral float-right" title="Intro to Neo4j">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../ICD-11-Visualizations/" class="btn btn-neutral float-right" title="ICD 11 Dashboards">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../first-website/" class="btn btn-neutral" title="Creating First Website"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../dash/NetworkX-learning/" class="btn btn-neutral" title="NetworkX basics"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -335,10 +416,10 @@ def other_page(name): #essentially we're just returning user and formatting the 
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../first-website/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../dash/NetworkX-learning/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../neo4j/neo4j-learning/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../ICD-11-Visualizations/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

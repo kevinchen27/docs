@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Dynamic Routing - Tools and Software Tutorials</title>
+  <title>Neo4j with ICD 11 Data - Tools and Software Tutorials</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Dynamic Routing";
-    var mkdocs_page_input_path = "flask\\dynamic-routing.md";
+    var mkdocs_page_name = "Neo4j with ICD 11 Data";
+    var mkdocs_page_input_path = "neo4j\\icd11-neo4j.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -169,56 +169,22 @@
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../flask-concepts/">Intro to Flask</a>
+    <a class="" href="../../flask/flask-concepts/">Intro to Flask</a>
   </li>
         
           
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../first-website/">Creating First Website</a>
+    <a class="" href="../../flask/first-website/">Creating First Website</a>
   </li>
         
           
 
 
-  
-    
-    <li class="navtree toctree-l2 page current">
-      <a class="current" href="./">
-        Dynamic Routing
-          <span class="toctree-expand"></span>
-      </a>
-    </li>
-    
-      
-
-
-
-      
-
-  <li class="toctree-l2">
-    <a href="#create-approute">
-      Create app.route
-      <span class="toctree-expand"></span>
-    </a>
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../flask/dynamic-routing/">Dynamic Routing</a>
   </li>
-
-
-
-      
-
-  <li class="toctree-l2">
-    <a href="#run-server">
-      Run server
-      <span class="toctree-expand"></span>
-    </a>
-  </li>
-
-
-
-
-  
         
       </ul>
     </li>
@@ -238,14 +204,14 @@
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../neo4j/neo4j-learning/">Intro to Neo4j</a>
+    <a class="" href="../neo4j-learning/">Intro to Neo4j</a>
   </li>
         
           
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../neo4j/icd11-neo4j">ICD 11 Neo4j</a>
+    <a class="" href=".">ICD 11 Neo4j</a>
   </li>
         
       </ul>
@@ -272,12 +238,8 @@
     <li><a href="../..">Docs</a> &raquo;</li>
     
       
-        
-          <li>Flask &raquo;</li>
-        
-      
     
-    <li>Dynamic Routing</li>
+    <li>Neo4j with ICD 11 Data</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -287,31 +249,33 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="dynamic-routing">Dynamic Routing</h2>
-<p>Route to different page depending on situation, such as in when different users log in to different accounts.
-However, steps to create and initialize Flask app remain the same.</p>
-<h2 id="create-approute">Create app.route</h2>
-<p><code>@app.route('/some_page/&lt;name&gt;')
-def other_page(name): #essentially we're just returning user and formatting the name into the user
-    return 'User: {}'.format(name)</code></p>
-<p><strong><name></strong> is an input, in this case for example the username. Flask will route to a different page depending on username input.</p>
-<h2 id="run-server">Run server</h2>
-<p><code>if __name__ == "__main__":
-    app.run()</code></p>
-<p>Must add /some_page/<name> to the end of the URL, where name can be anything</p>
+                <h1 id="neo4j-with-icd-11-data">Neo4j with ICD 11 Data</h1>
+<p>ICD 11 MMS data was transformed into a network graph in Neo4j using Neo4j's Python Bolt Driver. A Neo4j driver enables a developer to run Cypher queries in Python. These queries can be consumed as BoltStatementResults, which is an object returned by Neo4j in Python. </p>
+<h2 id="install-neo4j">Install Neo4j</h2>
+<p><code>pip install neo4j</code></p>
+<h2 id="import-neo4j">Import Neo4j</h2>
+<p><code>from neo4j import GraphDatabase</code></p>
+<h2 id="load-json-file">Load JSON file</h2>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>with open(&quot;MMS.json&quot;,&quot;r&quot;) as mms:
+    mms_data = json.load(mms)        
+</pre></div>
+
+
+<h2 id="initialize-neo4j-driver">Initialize Neo4j Driver</h2>
+<p>To initialize driver, Neo4j must be open in the application and local server set up in Neo4j. The driver argument takes the following arguments:
+<br>
+- uri: identifies graph database and how to connect it
+- auth: authentication that requires the username, password</p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>driver = GraphDatabase.driver(uri = &quot;bolt://localhost:11008&quot;, auth = (&quot;neo4j&quot;,&quot;pythondriver&quot;))
+</pre></div>
+
+
+<h2 id="populate-mms-data-in-neo4j">Populate MMS data in Neo4j</h2>
+<p>A single MMS </p>
               
             </div>
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../../neo4j/neo4j-learning/" class="btn btn-neutral float-right" title="Intro to Neo4j">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../first-website/" class="btn btn-neutral" title="Creating First Website"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>
@@ -335,10 +299,6 @@ def other_page(name): #essentially we're just returning user and formatting the 
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../first-website/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../../neo4j/neo4j-learning/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

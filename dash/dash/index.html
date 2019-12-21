@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Dynamic Routing - Tools and Software Tutorials</title>
+  <title>Dash Intro - Tools and Software Tutorials</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Dynamic Routing";
-    var mkdocs_page_input_path = "flask\\dynamic-routing.md";
+    var mkdocs_page_name = "Dash Intro";
+    var mkdocs_page_input_path = "dash\\dash.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -71,28 +71,28 @@
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../dash/numpy-basics/">Numpy Basics</a>
+    <a class="" href="../numpy-basics/">Numpy Basics</a>
   </li>
         
           
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../dash/pandas-basics/">Pandas Basics</a>
+    <a class="" href="../pandas-basics/">Pandas Basics</a>
   </li>
         
           
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../dash/plotly-basics/">Plotly Basics</a>
+    <a class="" href="../plotly-basics/">Plotly Basics</a>
   </li>
         
           
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../dash/plotly-barplots/">Plotly Barplots</a>
+    <a class="" href="../plotly-barplots/">Plotly Barplots</a>
   </li>
         
       </ul>
@@ -112,9 +112,61 @@
           
 
 
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../dash/dash/">Dash Intro</a>
+  
+    
+    <li class="navtree toctree-l2 page current">
+      <a class="current" href="./">
+        Dash Intro
+          <span class="toctree-expand"></span>
+      </a>
+    </li>
+    
+      
+
+  <li class="toctree-l2 current with-children">
+    <a href="#intro-to-dash">
+      Intro to Dash
+      <span class="toctree-expand"></span>
+    </a>
   </li>
+
+
+
+      
+
+  <li class="toctree-l2">
+    <a href="#essential-packages">
+      Essential packages
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+      
+
+  <li class="toctree-l2">
+    <a href="#step-1-create-instance-of-dash">
+      Step 1: Create instance of Dash
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+      
+
+  <li class="toctree-l2">
+    <a href="#sample-barplot">
+      Sample barplot
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+
+  
         
       </ul>
     </li>
@@ -134,7 +186,7 @@
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../dash/NetworkX-learning/">NetworkX basics</a>
+    <a class="" href="../NetworkX-learning/">NetworkX basics</a>
   </li>
         
           
@@ -169,56 +221,22 @@
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../flask-concepts/">Intro to Flask</a>
+    <a class="" href="../../flask/flask-concepts/">Intro to Flask</a>
   </li>
         
           
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../first-website/">Creating First Website</a>
+    <a class="" href="../../flask/first-website/">Creating First Website</a>
   </li>
         
           
 
 
-  
-    
-    <li class="navtree toctree-l2 page current">
-      <a class="current" href="./">
-        Dynamic Routing
-          <span class="toctree-expand"></span>
-      </a>
-    </li>
-    
-      
-
-
-
-      
-
-  <li class="toctree-l2">
-    <a href="#create-approute">
-      Create app.route
-      <span class="toctree-expand"></span>
-    </a>
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../flask/dynamic-routing/">Dynamic Routing</a>
   </li>
-
-
-
-      
-
-  <li class="toctree-l2">
-    <a href="#run-server">
-      Run server
-      <span class="toctree-expand"></span>
-    </a>
-  </li>
-
-
-
-
-  
         
       </ul>
     </li>
@@ -273,11 +291,11 @@
     
       
         
-          <li>Flask &raquo;</li>
+          <li>Dash &raquo;</li>
         
       
     
-    <li>Dynamic Routing</li>
+    <li>Dash Intro</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -287,18 +305,63 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="dynamic-routing">Dynamic Routing</h2>
-<p>Route to different page depending on situation, such as in when different users log in to different accounts.
-However, steps to create and initialize Flask app remain the same.</p>
-<h2 id="create-approute">Create app.route</h2>
-<p><code>@app.route('/some_page/&lt;name&gt;')
-def other_page(name): #essentially we're just returning user and formatting the name into the user
-    return 'User: {}'.format(name)</code></p>
-<p><strong><name></strong> is an input, in this case for example the username. Flask will route to a different page depending on username input.</p>
-<h2 id="run-server">Run server</h2>
-<p><code>if __name__ == "__main__":
-    app.run()</code></p>
-<p>Must add /some_page/<name> to the end of the URL, where name can be anything</p>
+                <h2 id="intro-to-dash">Intro to Dash</h2>
+<p>Dash is great because:
+- You can create dashboards in python
+- Served as web apps that you can deploy, not static html files
+- Composed of 2 parts: layout and interactivity like how moving sldier affects visualization</p>
+<h2 id="essential-packages">Essential packages</h2>
+<p>These packages must also be installed via pip install prior to loading them: </p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>import dash
+import dash_core_components as dcc
+import dash_html_components as html
+import plotly.graph_objs as go
+import numpy as np
+import pandas as pd
+</pre></div>
+
+
+<h2 id="step-1-create-instance-of-dash">Step 1: Create instance of Dash</h2>
+<p><code>app = dash.Dash()</code>
+<br>
+<code>app.layout = html.Div()</code> Creates a division in our dashboard to insert things</p>
+<h2 id="sample-barplot">Sample barplot</h2>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>app.layout = html.Div(children = [    
+    html.H1(&quot;Hello Dash!&quot;), 
+    html.Div(&quot;Dash: Web Dashboard with Python&quot;),
+    dcc.Graph(id= &quot;example&quot;, #dcc - dash core component and id for reference
+             figure = {&quot;data&quot;:[  #figure will take in dictionary
+                 {&quot;x&quot;:[1,2,3],&quot;y&quot;:[4,1,2],&quot;type&quot;:&quot;bar&quot;,&quot;name&quot;:&quot;SF&quot;},
+                 {&quot;x&quot;:[1,2,3],&quot;y&quot;:[2,4,5],&quot;type&quot;:&quot;bar&quot;,&quot;name&quot;:&quot;NYC&quot;}
+             ],
+                      &quot;layout&quot;:{   #figure will have key for data and dictionary
+                          &quot;title&quot;:&quot;BAR PLOTS!&quot; 
+                      }}) #everything inside the div is a cjildren&#39;s list
+                ])
+
+if __name__ == &#39;__main__&#39;: #checks if im running this script, it will grab application obj and run the server 
+    app.run_server()
+</pre></div>
+
+
+<p><br>  <br />
+<strong>Documentation Breakdown</strong>
+<br>
+After creating Dash app, we specify the layout of the Dashboard
+<br>
+<code>children</code> - List of components in the Dashboard
+<br>
+<code>html.Div</code> Creates a "division" on the webpage. This is needed because that "division" or block will contrain the Dash graphic, and we can create multiple Divisions for multiple Dashboards on the same webpage
+<br>
+<code>html.H1</code> - gives a header to the webpage
+<br>
+<code>html.Div</code> - this nested Div creates another block within which is the Dashboard graphic
+<br>
+<code>dcc.Graph</code> - specifies the type of graph that will be used. Depending on the graph, the data input will vary
+<br>
+<code>layout</code> - Can specify the title of the plot. Arguments are listed in Plotly documentation
+<br>
+We finally run the server using <code>app.run_server</code>. The server is required to keep running to access the webpage with the dashboard</p>
               
             </div>
           </div>
@@ -306,10 +369,10 @@ def other_page(name): #essentially we're just returning user and formatting the 
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../neo4j/neo4j-learning/" class="btn btn-neutral float-right" title="Intro to Neo4j">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../NetworkX-learning/" class="btn btn-neutral float-right" title="NetworkX basics">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../first-website/" class="btn btn-neutral" title="Creating First Website"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../plotly-barplots/" class="btn btn-neutral" title="Plotly Barplots"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -335,10 +398,10 @@ def other_page(name): #essentially we're just returning user and formatting the 
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../first-website/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../plotly-barplots/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../neo4j/neo4j-learning/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../NetworkX-learning/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

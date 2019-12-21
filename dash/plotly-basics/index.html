@@ -58,7 +58,7 @@
     
       
   <li class="navtree toctree-l1 label">
-    <p class="caption">Dash</p>
+    <p class="caption">Dash Prerequisites</p>
   </li>
 
 
@@ -136,11 +136,6 @@
     
       
         <li class="toctree-l3">
-          <a class="toctree-l4" href="#define-layout">Define Layout</a>
-        </li>
-    
-      
-        <li class="toctree-l3">
           <a class="toctree-l4" href="#save-html-file">Save HTML file</a>
         </li>
     
@@ -154,6 +149,69 @@
 
 
   
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../plotly-barplots/">Plotly Barplots</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Dash</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../dash/">Dash Intro</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">ICD 11 Dash</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../NetworkX-learning/">NetworkX basics</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../icd-11/ICD-11-Dash/">ICD 11 Data Entry</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../icd-11/ICD-11-Visualizations/">ICD 11 Dashboards</a>
+  </li>
         
       </ul>
     </li>
@@ -193,6 +251,34 @@
       </ul>
     </li>
     
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Neo4j</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../neo4j/neo4j-learning/">Intro to Neo4j</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../neo4j/icd11-neo4j">ICD 11 Neo4j</a>
+  </li>
+        
+      </ul>
+    </li>
+    
   </ul>
       </div>
       &nbsp;
@@ -215,7 +301,7 @@
     
       
         
-          <li>Dash &raquo;</li>
+          <li>Dash Prerequisites &raquo;</li>
         
       
     
@@ -230,7 +316,7 @@
             <div class="section">
               
                 <h2 id="install-plotly">Install plotly</h2>
-<p>Basic plotly gives us idea of Dash syntax and documentation
+<p>Basic plotly gives us an idea of Dash syntax and documentation. Dash syntax for its graphics are built on top of plotly. Plotly images are saved as html files in the computer.
 <br>
 <code>pip install plotly==4.2.1</code></p>
 <h2 id="import-plotly">Import plotly</h2>
@@ -240,22 +326,29 @@
 <p>Data must first be in a list
 <br></p>
 <h3 id="setup-data">Setup data</h3>
-<p><code>data = [go.Scatter(x= &lt;list of values for x-axis&gt;,
+<p><br></p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>data = [go.Scatter(x= &lt;list of values for x-axis&gt;,
     y =&lt;list of values for y-axis&gt;,
-    mode = 'markers', 
+    mode = &#39;markers&#39;, 
     marker = dict(size = &lt;numeric size&gt;,
-    color = "&lt;insert color or rgb&gt;",
-    symbol = "&lt;type of scatterplot symbol&gt;",
+    color = &quot;&lt;insert color or rgb&gt;&quot;,
+    symbol = &quot;&lt;type of scatterplot symbol&gt;&quot;,
     line = dict(&lt;dictionary specifying with of line&gt;)
-    ))]</code>
-    <br>
-<br></p>
-<h3 id="define-layout">Define Layout</h3>
-<p><code>layout = go.Layout(title = "&lt;insert plot title",
+    ))]
+ ```    
+
+&lt;br&gt;
+&lt;br&gt;
+### Define Layout
+</pre></div>
+
+
+<p>layout = go.Layout(title = "&lt;insert plot title",
                   xaxis = dict(title = "MY X AXIS" ,
                   yaxis = dict(title = "MY Y AXIS"), 
-                  hovermode = "closest")</code>
-<br>
+                  hovermode = "closest")
+```</p>
+<p><br>
 <br></p>
 <h3 id="save-html-file">Save HTML file</h3>
 <p><code>pyo.plot(data, filename = "&lt;insert name&gt;.html")</code>
@@ -272,7 +365,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../flask/flask-concepts/" class="btn btn-neutral float-right" title="Intro to Flask">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../plotly-barplots/" class="btn btn-neutral float-right" title="Plotly Barplots">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../pandas-basics/" class="btn btn-neutral" title="Pandas Basics"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -304,7 +397,7 @@
         <span><a href="../pandas-basics/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../flask/flask-concepts/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../plotly-barplots/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

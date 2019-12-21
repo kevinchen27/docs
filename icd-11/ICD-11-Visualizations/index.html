@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Creating First Website - Tools and Software Tutorials</title>
+  <title>ICD 11 Dashboards - Tools and Software Tutorials</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
   <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Creating First Website";
-    var mkdocs_page_input_path = "flask\\first-website.md";
+    var mkdocs_page_name = "ICD 11 Dashboards";
+    var mkdocs_page_input_path = "icd-11\\ICD-11-Visualizations.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -141,15 +141,92 @@
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../icd-11/ICD-11-Dash/">ICD 11 Data Entry</a>
+    <a class="" href="../ICD-11-Dash/">ICD 11 Data Entry</a>
   </li>
         
           
 
 
-  <li class="navtree toctree-l2 inactive">
-    <a class="" href="../../icd-11/ICD-11-Visualizations/">ICD 11 Dashboards</a>
+  
+    
+    <li class="navtree toctree-l2 page current">
+      <a class="current" href="./">
+        ICD 11 Dashboards
+          <span class="toctree-expand"></span>
+      </a>
+    </li>
+    
+      
+
+  <li class="toctree-l2 current with-children">
+    <a href="#importing-libraries">
+      Importing libraries
+      <span class="toctree-expand"></span>
+    </a>
   </li>
+
+
+
+      
+
+  <li class="toctree-l2">
+    <a href="#import-csv-as-dataframe">
+      Import csv as data.frame
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+      
+
+  <li class="toctree-l2">
+    <a href="#interactive-barplot-showing-nodes-per-level-for-each-root">
+      Interactive barplot showing nodes per level for each root
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l2">
+    <ul class="subnav-l2 toc-hidden">
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#set-up-instance-of-dash">Set up instance of Dash</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#specify-dashboard-layout">Specify dashboard layout</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#specify-callback">Specify callback</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#update-graph-function">Update graph function</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#run-server">Run server</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#snapshot-of-graphic">Snapshot of Graphic</a>
+        </li>
+    
+    </ul>
+  </li>
+
+
+  
         
       </ul>
     </li>
@@ -169,87 +246,21 @@
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../flask-concepts/">Intro to Flask</a>
+    <a class="" href="../../flask/flask-concepts/">Intro to Flask</a>
   </li>
-        
-          
-
-
-  
-    
-    <li class="navtree toctree-l2 page current">
-      <a class="current" href="./">
-        Creating First Website
-          <span class="toctree-expand"></span>
-      </a>
-    </li>
-    
-      
-
-  <li class="toctree-l2 current with-children">
-    <a href="#flask-beginner-tutorial">
-      Flask Beginner Tutorial
-      <span class="toctree-expand"></span>
-    </a>
-  </li>
-
-
-
-      
-
-  <li class="toctree-l2">
-    <a href="#flask-basics">
-      Flask Basics
-      <span class="toctree-expand"></span>
-    </a>
-  </li>
-
-
-
-  <li class="toctree-l2">
-    <ul class="subnav-l2 toc-hidden">
-    
-      
-        <li class="toctree-l3">
-          <a class="toctree-l4" href="#first-install-flask">First install Flask</a>
-        </li>
-    
-      
-        <li class="toctree-l3">
-          <a class="toctree-l4" href="#import-flask">Import Flask</a>
-        </li>
-    
-      
-        <li class="toctree-l3">
-          <a class="toctree-l4" href="#create-instance-of-flask">Create instance of Flask</a>
-        </li>
-    
-      
-        <li class="toctree-l3">
-          <a class="toctree-l4" href="#route-to-homepage">Route to homepage</a>
-        </li>
-    
-      
-        <li class="toctree-l3">
-          <a class="toctree-l4" href="#define-function-to-display-content">Define function to display content</a>
-        </li>
-    
-      
-        <li class="toctree-l3">
-          <a class="toctree-l4" href="#run-server">Run server</a>
-        </li>
-    
-    </ul>
-  </li>
-
-
-  
         
           
 
 
   <li class="navtree toctree-l2 inactive">
-    <a class="" href="../dynamic-routing/">Dynamic Routing</a>
+    <a class="" href="../../flask/first-website/">Creating First Website</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../flask/dynamic-routing/">Dynamic Routing</a>
   </li>
         
       </ul>
@@ -305,11 +316,11 @@
     
       
         
-          <li>Flask &raquo;</li>
+          <li>ICD 11 Dash &raquo;</li>
         
       
     
-    <li>Creating First Website</li>
+    <li>ICD 11 Dashboards</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -319,31 +330,78 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="flask-beginner-tutorial">Flask Beginner Tutorial</h1>
-<p>Basic Flask concepts and routing tutorial</p>
-<h1 id="flask-basics">Flask Basics</h1>
-<p>How to create a very simple first webpage</p>
-<h2 id="first-install-flask">First install Flask</h2>
-<p><code>pip install flask</code></p>
-<h2 id="import-flask">Import Flask</h2>
-<p><code>from flask import flask</code></p>
-<h2 id="create-instance-of-flask">Create instance of Flask</h2>
-<p><code>app = Flask(__name__)</code></p>
-<h2 id="route-to-homepage">Route to homepage</h2>
-<p><code>@app.route('/')</code></p>
-<h2 id="define-function-to-display-content">Define function to display content</h2>
-<p><code>def index():
-    return '&lt;h1&gt;Hello Puppy!&lt;/h1&gt;'</code></p>
-<h2 id="run-server">Run server</h2>
-<p><code>if __name__ == '__main__':
-    app.run()</code>
+                <p>ICD 11 Visualizations were created using Dash and data cleaned and obtained from ICD 11 Website and API. A data.frame of each root node with number of nodes per level was created and imported.</p>
+<h2 id="importing-libraries">Importing libraries</h2>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>import pandas as pd
+import numpy as np
+import dash
+import dash_core_components as dcc
+import dash_html_components as html
+from dash.dependencies import Input, Output
+import plotly.graph_objs as go
+import dash_bio as dashbio
+</pre></div>
+
+
+<h2 id="import-csv-as-dataframe">Import csv as data.frame</h2>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>pd.read_csv(&quot;withoutsum.csv&quot;)
+</pre></div>
+
+
+<h2 id="interactive-barplot-showing-nodes-per-level-for-each-root">Interactive barplot showing nodes per level for each root</h2>
+<h3 id="set-up-instance-of-dash">Set up instance of Dash</h3>
+<p><code>app = dash.Dash()</code></p>
+<h3 id="specify-dashboard-layout">Specify dashboard layout</h3>
+<p>Once an instance of Dash is created, the layout of the dashboard must be specified. <code>html.Div</code> creates a division or container on the web page within which the dashboard will be fit. 
 <br>
-You will get an output that says:</p>
-<blockquote>
-<p>Running on http://127.0.0.1:5000/
-<br>
-Click on link to see your first webpage</p>
-</blockquote>
+Inside html.Div(), a list is accepted and components of the dashboard are specified. In this case, we have a dropdown from which a user can choose which root node they want to look and look at the distribution of nodes in each level of that root node. A pointer to the graph of the dashboard also needs to be specified.</p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>app.layout = html.Div([
+                dcc.Dropdown(id=&quot;disease-type&quot;, #
+                            options = [{&quot;label&quot;:disease, &quot;value&quot;:disease} for disease in df[cols[0]]], #dropdown list containing each root node
+                             value = df[cols[0]].iloc[0]
+                            ),
+    dcc.Graph(id=&quot;graphics&quot;)
+            ])
+</pre></div>
+
+
+<h3 id="specify-callback">Specify callback</h3>
+<p><code>@app.callback</code> is a decorator that specifies which are the inputs and outputs of the graph. The decorator points to the elements specified in the dashboard layout object.</p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>@app.callback(
+Output(&quot;graphics&quot;,&quot;figure&quot;), #connects to the graphics id in 
+[Input(&quot;disease-type&quot;,&quot;value&quot;)])
+</pre></div>
+
+
+<h3 id="update-graph-function">Update graph function</h3>
+<p>Since our dashboard is an interactive graphic that updates depending on user input, we need to create a function that describes this behavior. The function below matches the user input with the data in the data.frame, and returns the barplot with detailed layout of the data, title, and x and y axes.</p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>def update_graph(selected_disease):
+    filtered_df = df[df[cols[0]] == selected_disease]
+    nodes = filtered_df.loc[:,&quot;1&quot;:&quot;12&quot;].values.tolist()
+    nodes = nodes[0]
+    return {
+        &quot;data&quot;: [
+                 {&quot;x&quot;:list(cols)[2:14],&quot;y&quot;:nodes,&quot;type&quot;:&quot;bar&quot;},
+             ],
+        &quot;layout&quot;: go.Layout(title = &quot;Nodes Per Level&quot;,
+                           xaxis = {&quot;title&quot;:&quot;Levels&quot;},
+                            yaxis = {&quot;title&quot;:&quot;Nodes&quot;}
+                           )
+    }
+</pre></div>
+
+
+<h3 id="run-server">Run server</h3>
+<p>Finally, we launch the server on which the dashboard is hosted with the following command:</p>
+<div class="codehilite" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>if __name__ == &quot;__main__&quot;:
+    app.run_server()
+</pre></div>
+
+
+<h3 id="snapshot-of-graphic">Snapshot of Graphic</h3>
+<p align = "center">
+<img src="https://github.com/kevinchen27/docs/blob/master/images/dash1.png" width="500" align = "middle"/>
+</p>
               
             </div>
           </div>
@@ -351,10 +409,10 @@ Click on link to see your first webpage</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../dynamic-routing/" class="btn btn-neutral float-right" title="Dynamic Routing">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../flask/flask-concepts/" class="btn btn-neutral float-right" title="Intro to Flask">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../flask-concepts/" class="btn btn-neutral" title="Intro to Flask"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../ICD-11-Dash/" class="btn btn-neutral" title="ICD 11 Data Entry"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -380,10 +438,10 @@ Click on link to see your first webpage</p>
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../flask-concepts/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../ICD-11-Dash/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../dynamic-routing/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../flask/flask-concepts/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
